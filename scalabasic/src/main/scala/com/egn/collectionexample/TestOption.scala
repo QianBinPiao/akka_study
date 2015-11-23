@@ -1,8 +1,5 @@
 package com.egn.collectionexample
 
-/**
- * Created by ypiao on 8/5/15.
- */
 object TestOption {
   def main(args: Array[String]) {
     val capitals = Map("France" -> "Paris", "Japan" -> "Tokyo")
