@@ -19,8 +19,9 @@ class AskActor extends Actor {
 
 object AskTest extends App{
   val system = ActorSystem("AskTestSystem")
+  println(system.name)
   val myActor = system.actorOf(Props[AskActor], name="myActor")
-
+  println(myActor.path)
   implicit val timeout = Timeout(5 seconds)
   val future = myActor ? AskNameMessage
   val result = Await.result(future, timeout.duration).asInstanceOf[String]
